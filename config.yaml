@@ -6,24 +6,31 @@
 ## next time.
 ##
 
+### ACQUISITION CONTROL SETTINGS
+#Specify the acquisition filetype. A datatype which is compatible with the OpenWave software should be provided.
+acq_filetype: 'hdf5'
+
+
+### CAMERA SETTINGS
 # use 0 for inbuilt webcam
 cam_id: 0
-
 #The mac webcam will start with these parameters
 cam_frame_width: 1280
 cam_fram_height: 720
 cam_tExposure: 10.0 #ms
 cam_nAccumulations: 1
 cam_textFilename: ''
+#The displacement and size of the sectioning of image B.
 nImgX: 0
 nImgY: 0
 nImgN: 256
 # Times between calculation iterations.
-#   Increase if the CPU load gets excessive. 
+#   Increase if the CPU load gets excessive.
 cam_histogram_timer: 300 #ms
 cam_acquisition_timer: 50 #ms
 
 
+### STAGE SETTINGS
 stage_name: "demo"
 # use com4 for NT or /dev/tty.usbmodem1421 for OSX
 stage_port: "/dev/tty.usbmodem1421"
