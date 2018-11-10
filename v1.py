@@ -29,22 +29,12 @@ def apply_custom_colormap(image_gray, cmap=plt.get_cmap('seismic')):
     channels = [cv2.LUT(image_gray, color_range[:,i]) for i in range(3)]
     return np.dstack(channels)
 
-class differential_camera():
-    def __init__(self):
-
-        self.image = None
-        self.capture = 0 #To check if we have started acq.
-
-        self.frame_width = 1280
-        self.frame_height = 720
-
-
 class simple(QMainWindow):
     def __init__(self):
         super(simple, self).__init__()
         loadUi('mainWindow.ui', self)
-
-        self.cam = differential_camera()
+        self.image = None
+        self.capture = 0 #To check if we have started acq.
 
         #Connect signals for camera interaction
         self.btnCameraStart.clicked.connect(self.start_cam)
@@ -55,6 +45,9 @@ class simple(QMainWindow):
         self.nImgN.valueChanged.connect(self.protect_sectioning)
         self.nImgX.valueChanged.connect(self.protect_sectioning)
         self.nImgY.valueChanged.connect(self.protect_sectioning)
+
+        self.frame_width = 1280
+        self.frame_height = 720
 
     def print_log(self):
         print('test')
