@@ -1,0 +1,21 @@
+# use 0 for inbuilt webcam
+cam_id: 0
+
+#The mac webcam will start with these parameters
+cam_frame_width: 1280
+cam_fram_height: 720
+cam_tExposure: 10.0
+cam_nAccumulations: 1
+cam_textFilename: ''
+nImgX: 0
+nImgY: 0
+nImgN: 256
+
+
+stage_name: "demo"
+# use com4 for NT or /dev/tty.usbmodem1421 for OSX
+stage_port: "/dev/tty.usbmodem1421"
+stage_baud: 9600
+nStart: -52000
+nStop: -54000
+nStep: -10
