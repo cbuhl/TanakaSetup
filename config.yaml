@@ -1,15 +1,27 @@
+##
+## This file allows non-volatile changes of the parameters for the
+## acquisition software. In short, you can press the "Save parameters
+## as standard", and the GUI overwrites details of the acquisition
+## in the file. They will be ready to use when you open the software
+## next time.
+##
+
 # use 0 for inbuilt webcam
 cam_id: 0
 
 #The mac webcam will start with these parameters
 cam_frame_width: 1280
 cam_fram_height: 720
-cam_tExposure: 10.0
+cam_tExposure: 10.0 #ms
 cam_nAccumulations: 1
 cam_textFilename: ''
 nImgX: 0
 nImgY: 0
 nImgN: 256
+# Times between calculation iterations.
+#   Increase if the CPU load gets excessive. 
+cam_histogram_timer: 300 #ms
+cam_acquisition_timer: 50 #ms
 
 
 stage_name: "demo"
